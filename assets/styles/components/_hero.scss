@@ -1,0 +1,140 @@
+.hero {
+  background: var(--green);
+  margin-bottom: 5rem;
+  overflow: hidden;
+
+  @media (max-width: 768px) {
+    padding: 2rem 0;
+    margin-bottom: 3rem;
+  }
+
+  &__row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0 2rem;
+
+    @media (max-width: 768px) {
+      flex-direction: column;
+    }
+  }
+
+  &__content {
+    width: 45%;
+
+    @media (max-width: 768px) {
+      text-align: center;
+      width: 100%;
+      margin-bottom: 2.5rem;
+    }
+  }
+
+  &__product {
+    width: 55%;
+
+    @media (max-width: 768px) {
+      width: 100%;
+    }
+  }
+}
+
+.hero-content {
+  color: var(--white);
+
+  @media (max-width: 768px) {
+    margin-bottom: 6rem;
+  }
+
+  @media (max-width: 475px) {
+    margin-bottom: 4rem;
+  }
+
+  &__title {
+    font-weight: 700;
+    font-size: 3rem;
+    margin-bottom: 3.125rem;
+
+    @media (max-width: 768px) {
+      margin-bottom: 1.5rem;
+    }
+  }
+
+  &__desc {
+    font-size: var(--text-sm);
+    line-height: 1.5rem;
+    margin-bottom: 3.125rem;
+
+    @media (max-width: 768px) {
+      width: 75%;
+      margin: 0 auto;
+      margin-bottom: 1.5rem;
+    }
+  }
+
+  &__more {
+    border: 2px solid var(--white);
+
+    &:hover {
+      background: var(--white);
+      color: var(--green);
+    }
+  }
+}
+
+.hero-product {
+  display: flex;
+  justify-content: end;
+
+  @media (max-width: 768px) {
+    justify-content: center;
+    margin-bottom: -10%;
+  }
+
+  &__img {
+    position: relative;
+    max-width: max-content;
+
+    img {
+      position: relative;
+      z-index: 15;
+      max-width: 100%;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 5;
+      width: 140%;
+      height: 140%;
+      background: var(--white);
+      opacity: 30%;
+      border-radius: 50%;
+
+      @media (max-width: 768px) {
+        width: 120%;
+        height: 120%;
+      }
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 110%;
+      height: 110%;
+      background: var(--white);
+      opacity: 40%;
+      border-radius: 50%;
+
+      @media (max-width: 768px) {
+        width: 90%;
+        height: 90%;
+      }
+    }
+  }
+}

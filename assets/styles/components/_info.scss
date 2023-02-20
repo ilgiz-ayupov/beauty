@@ -1,0 +1,110 @@
+.info {
+  --info-gap: 2rem;
+
+  margin-bottom: 7.5rem;
+  @media (max-width: 1100px) {
+    --info-gap: 1rem;
+  }
+  @media (max-width: 768px) {
+    margin-bottom: 4rem;
+  }
+
+  &__row {
+    display: flex;
+    justify-content: center;
+    gap: var(--info-gap);
+    flex-wrap: wrap;
+  }
+
+  &__mail,
+  &__shops {
+    width: calc(100% / 2 - var(--info-gap));
+    color: var(--white);
+    background: var(--green);
+    border-radius: 0.625rem;
+    padding: 2.2rem 2.5rem;
+
+    @media (max-width: 1100px) {
+      padding: 2.2rem 1.5rem;
+    }
+    @media (max-width: 992px) {
+      width: 100%;
+    }
+  }
+
+  &__title {
+    font-weight: 700;
+    font-size: 1.125rem;
+    margin-bottom: 1.4rem;
+  }
+
+  &__desc {
+    font-size: var(--text-sm);
+    line-height: 1.4;
+    margin-bottom: 1.8rem;
+  }
+}
+
+.info-mail {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  @media (max-width: 576px) {
+    flex-direction: column;
+    align-items: initial;
+    justify-content: initial;
+  }
+
+  &__content {
+    max-width: 60%;
+
+    @media (max-width: 576px) {
+      max-width: 100%;
+    }
+  }
+
+  &__desc {
+    @media (max-width: 576px) {
+      width: 80%;
+    }
+  }
+
+  &__form {
+    width: 100%;
+
+    @media (max-width: 576px) {
+        width: 90%;
+    }
+
+    input {
+      display: inline-block;
+      padding: 0.625rem 1.5625rem;
+      width: 100%;
+      border: none;
+      background: var(--white);
+      border-radius: 2rem;
+      outline: var(--gray);
+
+      ::placeholder {
+        font-family: var(--primary-color);
+        font-size: var(--text-sm);
+        color: #c4c4c4;
+      }
+    }
+  }
+}
+
+.info-shops {
+  &__desc {
+    width: 50%;
+  }
+
+  &__btn {
+    border: 2px solid var(--white);
+    &:hover {
+      background: var(--white);
+      color: var(--green);
+    }
+  }
+}

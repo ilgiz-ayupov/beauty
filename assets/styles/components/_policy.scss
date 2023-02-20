@@ -1,0 +1,19 @@
+.policy {
+  font-size: 0.75rem;
+  color: #828282;
+  padding: 1.5625rem 0;
+
+  &__row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  &__link {
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}

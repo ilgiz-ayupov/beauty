@@ -1,0 +1,19 @@
+.categories {
+  padding: 2rem 0;
+  background: var(--white);
+
+  &__row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem 2.5rem;
+  }
+
+  &__link {
+    &.active {
+      font-weight: 700;
+      color: var(--green);
+    }
+  }
+}

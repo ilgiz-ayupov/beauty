@@ -1,0 +1,14 @@
+.pre-header {
+  color: var(--black-800);
+  padding: 1rem 0;
+
+  @media (max-width: 768px) {
+    display: none;
+  }
+}
+
+.pre-header-menu {
+  display: flex;
+  justify-content: center;
+  gap: 0 2rem;
+}
